@@ -21,15 +21,27 @@ class CWButton: UIButton {
     init(color : UIColor, title: String, systemImageName: String){
         super.init(frame: .zero)
         
-        configuration = .tinted()
+        layer.cornerRadius = 8
+        setTitle(title, for: .normal)
+        
+        backgroundColor = color
+        titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
+        
+        _ = UIImage(systemName: systemImageName)
+        
+        
+        
+        
+        
+        
+        /*configuration = .tinted()
         configuration?.title = title
         configuration?.baseForegroundColor = color
         configuration?.baseBackgroundColor = color
         configuration?.cornerStyle = .medium
-        
         configuration?.image = UIImage(systemName: systemImageName)
         configuration?.imagePadding = 5
-        configuration?.imagePlacement = .trailing
+        configuration?.imagePlacement = .trailing */
         
         translatesAutoresizingMaskIntoConstraints = false
         
